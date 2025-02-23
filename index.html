@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сучасний Інтернет-Магазин</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+    <header>
+        <nav>
+			<p class="logo-text">Sushi Salad</p>
+			<img class="logo" src="https://w7.pngwing.com/pngs/661/897/png-transparent-octopus-squid-drawing-octopus-miscellaneous-photography-cartoon-thumbnail.png" alt="logo">
+            <ul>
+                <li><a href="#">Головна</a></li>
+                <li><a href="#categories" id="categories-btn">Категорії</a></li>
+                <li><a href="#about-section">Про нас</a></li>
+                <li><a href="#map">Де нас знайти</a></li>
+                <li>
+                    <a href="#" id="cart-btn">Кошик (<span id="cart-count">0</span>)</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <aside>
+                <div class="search-container">
+                    <input type="text" id="search" placeholder="Пошук товарів..." />
+                    <button id="search-btn">Знайти</button>
+                </div>
+                
+                <div id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d20309.075323923767!2d30.4721233!3d50.4851493!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cdf060730d19%3A0xf4b6c7746f3c4f0c!2z0JXQv9GW0YbQtdC90YLRgA!5e0!3m2!1sru!2sua!4v1740061335756!5m2!1sru!2sua" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                
+                <ul id="categories">
+                    <li><button id="category-filter">Всі</button></li>
+                    <li><button id="category-filter">Роли</button></li>
+                    <li><button id="category-filter">Сети</button></li>
+                    <li><button id="category-filter">Суші шаурма</button></li>
+                </ul>
+            </aside>
+            
+            <section id="products">
+            </section>
+        </div>
+       
+        
+        <!-- Контакти Section -->
+        <section id="about-section" class="about">
+            <h2>Про нас</h2>
+            <p class="about-text">
+                Привіт! Ми Sushi Salad і ми обожнюємо суші так само, як і ви. Наша місія — готувати смачні, свіжі та красиві роли, які приносять вам радість. Уявіть ситуацію: ви прийшли в Епіцентр для того, щоб закупитися, ви виснажені та хочете їсти, і ось ви натрапляєте на наш заклад. Ви прямо зі всіма покупками можете сісти, відпочити та поїсти. Правда ж зручно? У нас тільки якісні продукти, крута команда і бажання зробити ваш день смачнішим. 
+                Готові спробувати нашу кухню? Замовляйте нашу доставку або заходьте в наш заклад, який знаходиться в ТЦ Епіцентр біля складу. Заходьте, ми будемо раді вас бачити!
+            </p>
+        </section>
+        
+    </main>
+
+    <div id="cart-modal" class="modal hidden">
+        <div class="modal-content">
+            <button id="close-cart">X</button>
+            <h2>Кошик</h2>
+            <ul id="cart-items"></ul>
+            <p>Загальна сума: <span id="total-price">0</span> грн</p>
+            <div class="btns">
+                <button id="checkout"><a href="#checkout-form">Оформити замовлення</a></button>
+            <button id="clear-cart">Очистити кошик</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <section id="checkout-form" class="hidden">
+        <h2>Оформлення замовлення</h2>
+        <form id="checkout-form-form">
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" required />
+    
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" required />
+    
+            <label for="address">Адреса:</label>
+            <input type="text" id="address" required />
+    
+            <button type="submit">Підтвердити замовлення</button>
+        </form>
+    </section>
+
+    <script defer src="./script.js"></script>
+</body>
+</html>
